@@ -137,4 +137,36 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/two" />
 
+    <Button
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/nine"
+        android:layout_toEndOf="@+id/nine"
+        android:id="@+id/plus" />
+
+    <Button
+        android:text="-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/three"
+        android:layout_toEndOf="@+id/six"
+        android:id="@+id/minus" />
+
+    <Button
+        android:text="X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/equals"
+        android:layout_toEndOf="@+id/three"
+        android:id="@+id/multiply" />
+
+    <Button
+        android:text="%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/three"
+        android:id="@+id/divide" />
+
 </RelativeLayout>
