@@ -11,7 +11,107 @@
     tools:context="com.example.dfreeman.calculator.MainActivity">
 
     <TextView
+        android:id="@+id/firstInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="firstInput" />
+
+    <Button
+        android:id="@+id/zero"
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/zero"
+        android:layout_alignParentStart="true"
+        android:id="@+id/one" />
+
+    <Button
+        android:text="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/one"
+        android:layout_alignParentStart="true"
+        android:id="@+id/four" />
+
+    <Button
+        android:text="7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/four"
+        android:layout_alignParentStart="true"
+        android:id="@+id/seven" />
+
+    <Button
+        android:text="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/four"
+        android:layout_toEndOf="@+id/zero"
+        android:id="@+id/two" />
+
+    <Button
+        android:text="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/two"
+        android:layout_toEndOf="@+id/two"
+        android:id="@+id/three" />
+
+    <Button
+        android:text="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/two"
+        android:layout_toEndOf="@+id/four"
+        android:id="@+id/five" />
+
+    <Button
+        android:text="6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/five"
+        android:layout_toEndOf="@+id/two"
+        android:id="@+id/six" />
+
+    <Button
+        android:text="8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/five"
+        android:layout_toEndOf="@+id/seven"
+        android:id="@+id/eight" />
+
+    <Button
+        android:text="9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/six"
+        android:layout_toEndOf="@+id/eight"
+        android:id="@+id/nine" />
+
+    <TextView
+        android:text="operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/firstInput"
+        android:layout_toEndOf="@+id/firstInput"
+        android:layout_marginStart="17dp"
+        android:id="@+id/operator" />
+
+    <TextView
+        android:text="secondInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/operator"
+        android:layout_toEndOf="@+id/operator"
+        android:layout_marginStart="17dp"
+        android:id="@+id/secondInput" />
+
 </RelativeLayout>
