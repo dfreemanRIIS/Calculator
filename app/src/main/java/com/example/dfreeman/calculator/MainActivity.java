@@ -53,4 +53,20 @@ public class MainActivity extends AppCompatActivity {
         TextView firstField = (TextView)findViewById(R.id.firstInput);
         firstField.setText(firstField.getText() + "9");
     }
+    public void onPlusClick(View v) {
+        TextView operatorField = (TextView)findViewById(R.id.operator);
+        operatorField.setText("+");
+    }
+    public void onMinusClick(View v) {
+        TextView operatorField = (TextView)findViewById(R.id.operator);
+        operatorField.setText("-");
+    }
+    public void onMultClick(View v) {
+        TextView operatorField = (TextView)findViewById(R.id.operator);
+        operatorField.setText("X");
+    }
+    public void onDivideClick(View v) {
+        TextView operatorField = (TextView)findViewById(R.id.operator);
+        operatorField.setText("%");
+    }
 }

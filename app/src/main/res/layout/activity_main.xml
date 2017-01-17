@@ -143,6 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/nine"
         android:layout_toEndOf="@+id/nine"
+        android:onClick="onPlusClick"
         android:id="@+id/plus" />
 
     <Button
@@ -151,6 +152,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/three"
         android:layout_toEndOf="@+id/six"
+        android:onClick="onMinusClick"
         android:id="@+id/minus" />
 
     <Button
@@ -159,6 +161,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/equals"
         android:layout_toEndOf="@+id/three"
+        android:onClick="onMultClick"
         android:id="@+id/multiply" />
 
     <Button
@@ -167,6 +170,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/three"
+        android:onClick="onDivideClick"
         android:id="@+id/divide" />
 
 </RelativeLayout>
