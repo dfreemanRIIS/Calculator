@@ -13,14 +13,14 @@
     <TextView
         android:id="@+id/firstInput"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="firstInput" />
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/zero"
         android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickZero"
         android:layout_alignParentBottom="true"/>
 
     <Button
@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/zero"
         android:layout_alignParentStart="true"
+        android:onClick="onClickOne"
         android:id="@+id/one" />
 
     <Button
@@ -36,6 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/one"
+        android:onClick="onClickFour"
         android:layout_alignParentStart="true"
         android:id="@+id/four" />
 
@@ -44,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/four"
+        android:onClick="onClickSeven"
         android:layout_alignParentStart="true"
         android:id="@+id/seven" />
 
@@ -53,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/four"
         android:layout_toEndOf="@+id/zero"
+        android:onClick="onClickTwo"
         android:id="@+id/two" />
 
     <Button
@@ -61,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/two"
         android:layout_toEndOf="@+id/two"
+        android:onClick="onClickThree"
         android:id="@+id/three" />
 
     <Button
@@ -69,6 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/two"
         android:layout_toEndOf="@+id/four"
+        android:onClick="onClickFive"
         android:id="@+id/five" />
 
     <Button
@@ -77,6 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/five"
         android:layout_toEndOf="@+id/two"
+        android:onClick="onClickSix"
         android:id="@+id/six" />
 
     <Button
@@ -85,6 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/five"
         android:layout_toEndOf="@+id/seven"
+        android:onClick="onClickEight"
         android:id="@+id/eight" />
 
     <Button
@@ -93,10 +101,10 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/six"
         android:layout_toEndOf="@+id/eight"
+        android:onClick="onClickNine"
         android:id="@+id/nine" />
 
     <TextView
-        android:text="operator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -106,12 +114,27 @@
         android:id="@+id/operator" />
 
     <TextView
-        android:text="secondInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/operator"
         android:layout_toEndOf="@+id/operator"
         android:layout_marginStart="17dp"
         android:id="@+id/secondInput" />
+
+    <Button
+        android:text="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/zero"
+        android:id="@+id/bclear" />
+
+    <Button
+        android:text="="
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/equals"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/two" />
 
 </RelativeLayout>
