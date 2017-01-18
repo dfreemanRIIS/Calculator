@@ -113,8 +113,8 @@ public class MainActivity extends AppCompatActivity {
         String tempFirstField = firstField.getText().toString();
         String tempSecondField = secondField.getText().toString();
         String tempOperator = operatorField.getText().toString();
-        int firstNo;
-        int secondNo;
+        long firstNo;
+        long secondNo;
         TextView answer = (TextView)findViewById(R.id.answer);
 
         //Try to cast the strings to numbers
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(tempOperator.equals("+")) {
-            int temp = firstNo + secondNo;
+            long temp = firstNo + secondNo;
 
             StringBuilder sb = new StringBuilder();
             sb.append("");
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             answer.setText(temp2);
         }
         if(tempOperator.equals("-")) {
-            int temp = firstNo - secondNo;
+            long temp = firstNo - secondNo;
 
             StringBuilder sb = new StringBuilder();
             sb.append("");
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
 
             answer.setText(temp2);        }
         if(tempOperator.equals("X")) {
-            int temp = firstNo * secondNo;
+            long temp = firstNo * secondNo;
 
             StringBuilder sb = new StringBuilder();
             sb.append("");
