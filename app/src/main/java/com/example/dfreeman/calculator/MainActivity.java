@@ -114,17 +114,56 @@ public class MainActivity extends AppCompatActivity {
         int secondNo;
         TextView answer = (TextView)findViewById(R.id.answer);
 
+        //Try to cast the strings to numbers
+        try {
+            firstNo = Integer.parseInt(tempFirstField);
+        } catch (NumberFormatException e) {
+            firstNo = 0;
+            answer.setText("ERROR");
+        }
+        try {
+            secondNo = Integer.parseInt(tempSecondField);
+        } catch (NumberFormatException e) {
+            secondNo = 0;
+            answer.setText("ERROR");
+        }
+
         if(tempOperator.equals("+")) {
-            answer.setText("PLUS");
+            int temp = firstNo + secondNo;
+
+            StringBuilder sb = new StringBuilder();
+            sb.append("");
+            sb.append(temp);
+            String temp2 = sb.toString();
+
+            answer.setText(temp2);
         }
         if(tempOperator.equals("-")) {
-            answer.setText("MINUS");
-        }
+            int temp = firstNo - secondNo;
+
+            StringBuilder sb = new StringBuilder();
+            sb.append("");
+            sb.append(temp);
+            String temp2 = sb.toString();
+
+            answer.setText(temp2);        }
         if(tempOperator.equals("X")) {
-            answer.setText("MULT");
-        }
+            int temp = firstNo * secondNo;
+
+            StringBuilder sb = new StringBuilder();
+            sb.append("");
+            sb.append(temp);
+            String temp2 = sb.toString();
+
+            answer.setText(temp2);        }
         if(tempOperator.equals("%")) {
-            answer.setText("DIV");
-        }
+            double temp = firstNo / secondNo;
+
+            StringBuilder sb = new StringBuilder();
+            sb.append("");
+            sb.append(temp);
+            String temp2 = sb.toString();
+
+            answer.setText(temp2);        }
     }
 }
