@@ -1,5 +1,6 @@
 package com.example.dfreeman.calculator;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +11,11 @@ public class MainActivity extends AppCompatActivity {
     TextView firstField;
     TextView secondField;
     TextView operatorField;
+    int backgroundCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        backgroundCounter = 0;
         secondHalf = false;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -165,5 +168,21 @@ public class MainActivity extends AppCompatActivity {
             String temp2 = sb.toString();
 
             answer.setText(temp2);        }
+    }
+    public void onChangeColor(View v) {
+        View mv = (View)findViewById(R.id.activity_main);
+        int temp = backgroundCounter % 3;
+        if(temp == 0) {
+            mv.setBackgroundColor(Color.argb(255, 255, 255, 255));
+            backgroundCounter++;
+        }
+        if(temp == 1) {
+            mv.setBackgroundColor(Color.argb(255, 200, 200, 200));
+            backgroundCounter++;
+        }
+        if(temp == 2) {
+            mv.setBackgroundColor(Color.argb(200, 255, 200, 200));
+            backgroundCounter++;
+        }
     }
 }
