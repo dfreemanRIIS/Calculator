@@ -9,6 +9,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean secondHalf;
     TextView firstField;
     TextView secondField;
+    TextView operatorField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         firstField = (TextView)findViewById(R.id.firstInput);
         secondField = (TextView)findViewById(R.id.secondInput);
+        operatorField = (TextView)findViewById(R.id.operator);
     }
 
     public void onClickZero(View v) {
@@ -81,22 +83,18 @@ public class MainActivity extends AppCompatActivity {
             firstField.setText(firstField.getText() + "9");
         }    }
     public void onPlusClick(View v) {
-        TextView operatorField = (TextView)findViewById(R.id.operator);
         operatorField.setText("+");
         secondHalf = true;
     }
     public void onMinusClick(View v) {
-        TextView operatorField = (TextView)findViewById(R.id.operator);
         operatorField.setText("-");
         secondHalf = true;
     }
     public void onMultClick(View v) {
-        TextView operatorField = (TextView)findViewById(R.id.operator);
         operatorField.setText("X");
         secondHalf = true;
     }
     public void onDivideClick(View v) {
-        TextView operatorField = (TextView)findViewById(R.id.operator);
         operatorField.setText("%");
         secondHalf = true;
     }
