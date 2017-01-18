@@ -160,14 +160,21 @@ public class MainActivity extends AppCompatActivity {
 
             answer.setText(temp2);        }
         if(tempOperator.equals("%")) {
-            double temp = firstNo / secondNo;
+            if(secondNo==0) {
+                answer.setText("YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO ");
+                View mv = (View)findViewById(R.id.activity_main);
+                mv.setBackgroundColor(Color.argb(255, 255, 0, 0));
+            } else {
+                double temp = firstNo / secondNo;
 
-            StringBuilder sb = new StringBuilder();
-            sb.append("");
-            sb.append(temp);
-            String temp2 = sb.toString();
+                StringBuilder sb = new StringBuilder();
+                sb.append("");
+                sb.append(temp);
+                String temp2 = sb.toString();
 
-            answer.setText(temp2);        }
+                answer.setText(temp2);
+            }
+        }
     }
     public void onChangeColor(View v) {
         View mv = (View)findViewById(R.id.activity_main);
