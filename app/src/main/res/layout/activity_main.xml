@@ -13,7 +13,8 @@
     <TextView
         android:id="@+id/firstInput"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
 
     <Button
         android:id="@+id/zero"
@@ -111,6 +112,7 @@
         android:layout_alignBottom="@+id/firstInput"
         android:layout_toEndOf="@+id/firstInput"
         android:layout_marginStart="17dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/operator" />
 
     <TextView
@@ -119,6 +121,7 @@
         android:layout_alignBottom="@+id/operator"
         android:layout_toEndOf="@+id/operator"
         android:layout_marginStart="17dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/secondInput" />
 
     <Button
@@ -181,7 +184,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/operator"
         android:layout_toEndOf="@+id/firstInput"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="30dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/answer" />
 
 </RelativeLayout>
