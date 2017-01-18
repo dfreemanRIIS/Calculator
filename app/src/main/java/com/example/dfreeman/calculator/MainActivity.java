@@ -99,6 +99,9 @@ public class MainActivity extends AppCompatActivity {
         secondHalf = true;
     }
     public void onClickClear(View v) {
+        firstField.setText("");
+        secondField.setText("");
+        operatorField.setText("");
         secondHalf = false;
     }
 }
