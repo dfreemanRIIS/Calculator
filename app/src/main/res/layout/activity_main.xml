@@ -136,6 +136,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/equals"
         android:layout_alignParentBottom="true"
+        android:onClick="onEqualsClick"
         android:layout_toEndOf="@+id/two" />
 
     <Button
@@ -173,5 +174,14 @@
         android:layout_toEndOf="@+id/three"
         android:onClick="onDivideClick"
         android:id="@+id/divide" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/operator"
+        android:layout_toEndOf="@+id/firstInput"
+        android:layout_marginTop="72dp"
+        android:id="@+id/answer" />
 
 </RelativeLayout>

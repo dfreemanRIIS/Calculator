@@ -103,5 +103,28 @@ public class MainActivity extends AppCompatActivity {
         secondField.setText("");
         operatorField.setText("");
         secondHalf = false;
+        TextView answer = (TextView)findViewById(R.id.answer);
+        answer.setText("");
+    }
+    public void onEqualsClick(View v) {
+        String tempFirstField = firstField.getText().toString();
+        String tempSecondField = secondField.getText().toString();
+        String tempOperator = operatorField.getText().toString();
+        int firstNo;
+        int secondNo;
+        TextView answer = (TextView)findViewById(R.id.answer);
+
+        if(tempOperator.equals("+")) {
+            answer.setText("PLUS");
+        }
+        if(tempOperator.equals("-")) {
+            answer.setText("MINUS");
+        }
+        if(tempOperator.equals("X")) {
+            answer.setText("MULT");
+        }
+        if(tempOperator.equals("%")) {
+            answer.setText("DIV");
+        }
     }
 }
