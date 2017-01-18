@@ -193,7 +193,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/plus"
-        android:layout_toEndOf="@+id/nine"
         android:onClick="onChangeColor"
         android:id="@+id/changeColor" />
 

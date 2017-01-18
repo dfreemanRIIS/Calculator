@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onChangeColor(View v) {
         View mv = (View)findViewById(R.id.activity_main);
-        int temp = backgroundCounter % 3;
+        int temp = backgroundCounter % 6;
         if(temp == 0) {
             mv.setBackgroundColor(Color.argb(255, 255, 255, 255));
             backgroundCounter++;
@@ -182,6 +182,18 @@ public class MainActivity extends AppCompatActivity {
         }
         if(temp == 2) {
             mv.setBackgroundColor(Color.argb(200, 255, 200, 200));
+            backgroundCounter++;
+        }
+        if (temp == 3) {
+            mv.setBackgroundColor(Color.argb(200, 100, 200, 255));
+            backgroundCounter++;
+        }
+        if (temp == 4) {
+            mv.setBackgroundColor(Color.argb(200, 255, 100, 150));
+            backgroundCounter++;
+        }
+        if (temp == 5) {
+            mv.setBackgroundColor(Color.argb(200, 100, 255, 150));
             backgroundCounter++;
         }
     }
