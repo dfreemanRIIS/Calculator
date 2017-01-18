@@ -127,7 +127,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/zero"
-        android:id="@+id/bclear" />
+        android:onClick="onClickClear"
+        android:id="@+id/clear" />
 
     <Button
         android:text="="
