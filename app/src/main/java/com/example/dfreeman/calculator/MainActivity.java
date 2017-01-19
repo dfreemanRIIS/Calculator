@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 View mv = (View)findViewById(R.id.activity_main);
                 mv.setBackgroundColor(Color.argb(255, 255, 0, 0));
             } else {
-                double temp = firstNo / secondNo;
+                float temp = (float)firstNo / (float)secondNo;
 
                 StringBuilder sb = new StringBuilder();
                 sb.append("");
