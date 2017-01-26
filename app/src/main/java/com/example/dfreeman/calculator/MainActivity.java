@@ -8,10 +8,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private boolean secondHalf;
-    TextView firstField;
-    TextView secondField;
-    TextView operatorField;
-    int backgroundCounter;
+    private TextView firstField;
+    private TextView secondField;
+    private TextView operatorField;
+    private int backgroundCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,64 +26,84 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickZero(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "0");
+            String temp = secondField.getText() + "0";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "0");
+            String temp = firstField.getText() + "0";
+            firstField.setText(temp);
         }
     }
     public void onClickOne(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "1");
+            String temp = secondField.getText() + "1";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "1");
+            String temp = firstField.getText() + "1";
+            firstField.setText(temp);
         }    }
     public void onClickTwo(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "2");
+            String temp = secondField.getText() + "2";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "2");
+            String temp = firstField.getText() + "2";
+            firstField.setText(temp);
         }    }
     public void onClickThree(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "3");
+            String temp = secondField.getText() + "3";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "3");
+            String temp = firstField.getText() + "3";
+            firstField.setText(temp);
         }    }
     public void onClickFour(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "4");
+            String temp = secondField.getText() + "4";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "4");
+            String temp = firstField.getText() + "4";
+            firstField.setText(temp);
         }    }
     public void onClickFive(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "5");
+            String temp = secondField.getText() + "5";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "5");
+            String temp = firstField.getText() + "5";
+            firstField.setText(temp);
         }    }
     public void onClickSix(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "6");
+            String temp = secondField.getText() + "6";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "6");
+            String temp = firstField.getText() + "6";
+            firstField.setText(temp);
         }    }
     public void onClickSeven(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "7");
+            String temp = secondField.getText() + "7";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "7");
+            String temp = firstField.getText() + "7";
+            firstField.setText(temp);
         }    }
     public void onClickEight(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "8");
+            String temp = secondField.getText() + "8";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "8");
+            String temp = firstField.getText() + "8";
+            firstField.setText(temp);
         }    }
     public void onClickNine(View v) {
         if(secondHalf){
-            secondField.setText(secondField.getText() + "9");
+            String temp = secondField.getText() + "9";
+            secondField.setText(temp);
         } else {
-            firstField.setText(firstField.getText() + "9");
+            String temp = firstField.getText() + "9";
+            firstField.setText(temp);
         }    }
     public void onPlusClick(View v) {
         operatorField.setText("+");
@@ -110,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         answer.setText("");
     }
     public void onEqualsClick(View v) {
+        final String error = "ERROR";
         String tempFirstField = firstField.getText().toString();
         String tempSecondField = secondField.getText().toString();
         String tempOperator = operatorField.getText().toString();
@@ -122,13 +143,13 @@ public class MainActivity extends AppCompatActivity {
             firstNo = Integer.parseInt(tempFirstField);
         } catch (NumberFormatException e) {
             firstNo = 0;
-            answer.setText("ERROR");
+            answer.setText(error);
         }
         try {
             secondNo = Integer.parseInt(tempSecondField);
         } catch (NumberFormatException e) {
             secondNo = 0;
-            answer.setText("ERROR");
+            answer.setText(error);
         }
 
         if(tempOperator.equals("+")) {
@@ -161,8 +182,9 @@ public class MainActivity extends AppCompatActivity {
             answer.setText(temp2);        }
         if(tempOperator.equals("%")) {
             if(secondNo==0) {
-                answer.setText("YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO ");
-                View mv = (View)findViewById(R.id.activity_main);
+                final String divZero = "YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO ";
+                answer.setText(divZero);
+                View mv = findViewById(R.id.activity_main);
                 mv.setBackgroundColor(Color.argb(255, 255, 0, 0));
             } else {
                 float temp = (float)firstNo / (float)secondNo;
@@ -177,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void onChangeColor(View v) {
-        View mv = (View)findViewById(R.id.activity_main);
+        View mv = findViewById(R.id.activity_main);
         int temp = backgroundCounter % 6;
         if(temp == 0) {
             mv.setBackgroundColor(Color.argb(255, 255, 255, 255));
