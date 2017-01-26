@@ -154,32 +154,17 @@ public class MainActivity extends AppCompatActivity {
 
         if(tempOperator.equals("+")) {
             long temp = firstNo + secondNo;
-
-            StringBuilder sb = new StringBuilder();
-            sb.append("");
-            sb.append(temp);
-            String temp2 = sb.toString();
-
-            answer.setText(temp2);
+            String output = "" + temp;
+            answer.setText(output);
         }
         if(tempOperator.equals("-")) {
             long temp = firstNo - secondNo;
-
-            StringBuilder sb = new StringBuilder();
-            sb.append("");
-            sb.append(temp);
-            String temp2 = sb.toString();
-
-            answer.setText(temp2);        }
+            String output = "" + temp;
+            answer.setText(output);        }
         if(tempOperator.equals("X")) {
             long temp = firstNo * secondNo;
-
-            StringBuilder sb = new StringBuilder();
-            sb.append("");
-            sb.append(temp);
-            String temp2 = sb.toString();
-
-            answer.setText(temp2);        }
+            String output = "" + temp;
+            answer.setText(output);        }
         if(tempOperator.equals("%")) {
             if(secondNo==0) {
                 final String divZero = "YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO YOU CANT DIVIDE BY ZERO ";
@@ -188,13 +173,8 @@ public class MainActivity extends AppCompatActivity {
                 mv.setBackgroundColor(Color.argb(255, 255, 0, 0));
             } else {
                 float temp = (float)firstNo / (float)secondNo;
-
-                StringBuilder sb = new StringBuilder();
-                sb.append("");
-                sb.append(temp);
-                String temp2 = sb.toString();
-
-                answer.setText(temp2);
+                String output = "" + temp;
+                answer.setText(output);
             }
         }
     }
